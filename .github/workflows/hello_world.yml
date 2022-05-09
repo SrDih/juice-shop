@@ -35,10 +35,10 @@ jobs:
           echo "Add other actions to build,"
           echo "test, and deploy your project."
           
-hello_world-windows:
-runs-on: windows-lastest
+hello-world-windows:
+    runs-on: windows-latest
+    needs: hello-world-ubuntu
 
-steps:
-
-- name: print hello world
-run: echo "hello world windows".
+    steps:
+    - name: Print hello world
+      run: echo "Hello world Windows"
